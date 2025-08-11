@@ -1,0 +1,14 @@
+.root {
+  background: var(--mantine-color-gray-1);
+  border: 1px solid var(--mantine-color-text-fade);
+  @mixin dark {
+    background: var(--mantine-color-button-fade);
+  }
+}
+
+.list {
+  padding-left: var(--mantine-spacing-xl);
+}
+.list li::marker {
+  color: var(--mantine-color-text);
+}

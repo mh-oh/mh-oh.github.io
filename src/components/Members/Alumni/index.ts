@@ -1,0 +1,2 @@
+
+export { Alumni } from "./Alumni";

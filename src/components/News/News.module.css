@@ -1,0 +1,51 @@
+
+.control {
+  border: 1px solid;
+  @mixin where-light {
+    --my-border-color: var(--mantine-color-gray-3);
+    --my-background-color: var(--mantine-color-gray-2);
+  }
+  @mixin where-dark {
+    --my-border-color: var(--mantine-color-dark-4);
+    --my-background-color: var(--mantine-color-dark-7);
+  }
+
+  &:where(:disabled, [data-disabled]) {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  @mixin where-light {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+
+    @mixin hover {
+      &:where(:not(:disabled, [data-disabled])) {
+        background-color: var(--mantine-color-gray-2);
+      }
+    }
+  }
+
+  @mixin where-dark {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+
+    @mixin hover {
+      &:where(:not(:disabled, [data-disabled])) {
+        background-color: var(--mantine-color-dark-7);
+      }
+    }
+  }
+
+  &:where([data-active]) {
+    background-color: var(--mantine-color-body);
+    /* background-color: var(--mantine-color-white); */
+    border-color: var(--my-border-color);
+    color: var(--mantine-color-text);
+    /* color: var(--pagination-active-color, var(--mantine-color-white)); */
+
+    @mixin hover {
+      background-color: var(--my-background-color);
+    }
+  }
+}

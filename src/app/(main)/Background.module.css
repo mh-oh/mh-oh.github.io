@@ -1,0 +1,32 @@
+.root {
+  background-image: url("/bg-dark.svg");
+  @mixin light {
+    background-image: url("/bg-light.svg");
+  }
+  background-repeat: no-repeat;
+  background-size : auto 100%;
+  @media (min-width: 0em) {
+    /* background-color: darkgreen; */
+    background-position: center top 0%;
+  }
+  @media (min-width: $mantine-breakpoint-xs) {
+    /* background-color: red; */
+    background-position: center top 0%;
+  }
+  @media (min-width: $mantine-breakpoint-sm) {
+    /* background-color: blue; */
+    background-position: center top 0%;
+  }
+  @media (min-width: $mantine-breakpoint-md) {
+    /* background-color: yellow; */
+    background-position: center top 0%;
+  }
+  @media (min-width: $mantine-breakpoint-lg) {
+    /* background-color: blueviolet; */
+    background-position: center top 0%;
+  }
+  @media (min-width: $mantine-breakpoint-xl) {
+    /* background-color: coral; */
+    background-position: center top 0%;
+  }
+}

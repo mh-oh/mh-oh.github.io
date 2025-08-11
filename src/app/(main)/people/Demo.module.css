@@ -1,0 +1,29 @@
+/* .root {
+  --padding: var(--button-padding-x-xs);
+} */
+
+.list {
+  position: relative;
+  gap: var(--mantine-spacing-xs);
+}
+
+.indicator {
+  background-color: var(--mantine-color-button-fade);
+  border-radius: var(--mantine-radius-lg);
+  border: 1px solid var(--mantine-color-button-border);
+}
+
+.tab {
+  z-index: 1;
+  font-weight: 500;
+  font-size: var(--mantine-font-size-md);
+  transition: color 100ms ease;
+  color: var(--mantine-color-text);
+  padding: var(--mantine-spacing-xs);
+  @mixin hover {
+    background-color: none;
+  }
+  &[data-active] {
+    color: var(--mantine-color-text-intensive);
+  }
+}

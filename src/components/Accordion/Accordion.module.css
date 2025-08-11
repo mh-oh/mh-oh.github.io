@@ -1,0 +1,9 @@
+
+.item {
+  @mixin dark {
+    background-color: var(--mantine-color-zinc-8);
+    &[data-active] {
+      background-color: var(--mantine-color-zinc-9);
+    }
+  }
+}
